@@ -1,6 +1,16 @@
-import {NotificationResponseItem} from "../models";
-import {actions, createMachine, InterpreterFrom, MachineConfig} from "xstate";
+ import {actions, createMachine, InterpreterFrom, MachineConfig} from "xstate";
 const  {assign} =actions;
+
+ export type ApiNotificationResponseItem ={
+     payload: any,
+ }
+
+ export type NotificationResponseItem =ApiNotificationResponseItem &{
+     severity?: "success" | "info" | "warning" | "error";
+     title: string,
+     id: string
+
+ }
 export interface NotificationsSchema {
 
     states: {

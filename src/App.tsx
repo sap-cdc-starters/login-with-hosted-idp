@@ -21,6 +21,7 @@ import {PrivateRoute} from "./routes";
 import { ThemeProvider, Theme, StyledEngineProvider, createTheme } from '@mui/material/styles';
 
 import makeStyles from '@mui/styles/makeStyles';
+import SignInOidc from "./components/SignInOidc";
 
 
 declare module '@mui/styles/defaultTheme' {
@@ -86,7 +87,8 @@ const App = () => {
 
                         <Router>
                             <PrivateRoute default as={ProfileContainer} path={"/"} authService={authService}/>
-                            <SignIn path={"/signin"} authService={authService}/>
+                            <SignIn path={"/signin-more"} authService={authService}/>
+                            <SignInOidc path={"/signin"} authService={authService}/>
                             <ProfileContainer path="/profile" authService={authService}/>
 
                         </Router>

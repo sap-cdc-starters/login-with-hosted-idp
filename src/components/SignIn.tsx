@@ -93,11 +93,11 @@ export default function SignIn({authService}: SignInProps) {
     };
 
     const handleOConnectLogin = async () => {
-        loginService.send({type: 'SOCIAL', provider: "logindynidp"});
+        loginService.send({type: 'SOCIAL', provider: "oidc-logindynidp"});
     };
 
     const handleOPublicConnectGigyaLogin = () => {
-        loginService.send({type: 'SOCIAL', provider: "logindynidpeu"});
+        loginService.send({type: 'SOCIAL', provider: "oidc-logindynidpeu"});
     };
 
     return (

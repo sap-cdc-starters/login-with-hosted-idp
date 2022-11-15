@@ -93,11 +93,11 @@ export default function SignIn({authService}: SignInProps) {
     };
 
     const handleOConnectLogin = async () => {
-        loginService.send({type: 'SOCIAL', provider: "oidc-oconnect"});
+        loginService.send({type: 'SOCIAL', provider: "logindynidp"});
     };
 
     const handleOPublicConnectGigyaLogin = () => {
-        loginService.send({type: 'SOCIAL', provider: "oidc-coolconnect"});
+        loginService.send({type: 'SOCIAL', provider: "logindynidpeu"});
     };
 
     return (
@@ -196,17 +196,6 @@ export default function SignIn({authService}: SignInProps) {
 
             >
                 Sign In With Google
-            </Button> 
-            
-            <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-                onClick={handleOPublicConnectGigyaLogin}
-            >
-                Sign In OIDC Provider
             </Button>
 
             <Button
@@ -217,8 +206,21 @@ export default function SignIn({authService}: SignInProps) {
                 className={classes.submit}
                 onClick={handleOConnectLogin}
             >
-                Sign In With OConnect
+                Sign In With OIDC Connect (logindynidp)
             </Button>
+            
+            <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+                onClick={handleOPublicConnectGigyaLogin}
+            >
+                Sign In OIDC Provider (logindynidp/eu)
+            </Button>
+
+       
             <Grid container justifyContent="flex-start">
                 <Grid item>
                     <Link  onClick={handleRegister} variant="body2">

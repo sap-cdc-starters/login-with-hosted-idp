@@ -139,7 +139,6 @@ export default function SignIn({authService}: SignInProps) {
                             {...register("password", {required: true})}
                         />
                         {errors && errors.password && <span>Please enter a password</span>}
-                        {message &&  <span><ErrorOutlined /> {message}</span>}
                         <Button
                             type="submit"
                             fullWidth
@@ -229,6 +228,7 @@ export default function SignIn({authService}: SignInProps) {
                 </Grid>
             </Grid>
 
+            {message &&  <span><ErrorOutlined /> {message}</span>}
 
         </Container>
     );

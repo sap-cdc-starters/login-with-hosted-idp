@@ -2,10 +2,9 @@ import React, {useEffect} from "react";
 import {AnyEventObject, Interpreter, ActionTypes} from "xstate";
 import { Paper, Typography } from "@mui/material";
 import makeStyles from '@mui/styles/makeStyles';
-import {NotificationResponseItem, NotificationUpdatePayload} from "../models";
 import NotificationList from "../components/NotificationList";
 import {AuthService} from "../machines/authMachine";
-import {NotificationsEvents, NotificationsService} from "../machines/notificationsMachine";
+import {NotificationResponseItem, NotificationsEvents, NotificationsService} from "../machines/notificationsMachine";
 import {omit} from "lodash/fp";
 import {useActor} from "@xstate/react";
 
@@ -32,7 +31,8 @@ function generateUniqueID() {
     }
 
 
-
+interface NotificationUpdatePayload {
+}
 
 const NotificationsContainer: React.FC<Props> = ({authService, notificationsService}) => {
     const classes = useStyles();

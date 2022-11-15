@@ -27,8 +27,8 @@ import {
 
 import makeStyles from '@mui/styles/makeStyles';
 
-import {NotificationResponseItem} from "../models";
 import JsonView from "./JsonTreeViewer";
+import {NotificationResponseItem} from "../machines/notificationsMachine";
 
 export interface NotificationListItemProps {
     notification: NotificationResponseItem;

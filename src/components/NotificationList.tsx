@@ -2,7 +2,7 @@ import React from "react";
 import { List } from "@mui/material";
 
 import NotificationListItem from "./NotificationListItem";
-import { NotificationResponseItem } from "../models";
+import {NotificationResponseItem} from "../machines/notificationsMachine";
 
 export interface NotificationsListProps {
   notifications: NotificationResponseItem[];

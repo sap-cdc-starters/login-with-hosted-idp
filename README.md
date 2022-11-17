@@ -4,7 +4,9 @@
  - client side implemantation with Gigya sdk
  
  ## Live site
+ 
 deployed to https://store.eu.dynidp.com/
+
 login page: https://gigya.login.dynidp.com/pages/login
   
 

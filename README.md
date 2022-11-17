@@ -5,11 +5,11 @@
  
  ## Live site
 deployed to https://store.eu.dynidp.com/
-
+login page: https://gigya.login.dynidp.com/pages/login
   
 
-## Confirmation flow
-> scenario - Login with gigya idp hosted page
+## Scenario
+>  Login with gigya idp hosted page
 
 ### Gigya setup
 
